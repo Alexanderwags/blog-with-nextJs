@@ -1,4 +1,5 @@
-import Head from "next/head";
+import Header from "@/components/sections/Header"
+import Head from "next/head"
 
 export default function About() {
   return (
@@ -6,6 +7,7 @@ export default function About() {
       <Head>
         <title>About | {process.env.SITE_NAME}</title>
       </Head>
+      <Header />
       <main>
         <h1>About us</h1>
         <span>
@@ -16,5 +18,5 @@ export default function About() {
         </span>
       </main>
     </div>
-  );
+  )
 }
