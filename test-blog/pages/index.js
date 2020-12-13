@@ -7,7 +7,6 @@ export default function Home() {
       <Head>
         <title>Home | {process.env.SITE_NAME}</title>
       </Head>
-      <Header />
       <main>
         <h1>Blog</h1>
         <span>{process.env.API_BLOG}</span>

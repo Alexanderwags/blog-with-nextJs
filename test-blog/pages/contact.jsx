@@ -1,14 +1,14 @@
-import Header from "@/components/sections/Header"
+import React from "react"
+import PropTypes from "prop-types"
 import Head from "next/head"
-
-export default function About() {
+function contact(props) {
   return (
     <div>
       <Head>
-        <title>About | {process.env.SITE_NAME}</title>
+        <title>Contact | {process.env.SITE_NAME}</title>
       </Head>
       <main>
-        <h1>About us</h1>
+        <h1>Contact Us </h1>
         <span>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. At culpa quod
           amet praesentium sit cupiditate corporis aliquid! Commodi cumque, hic
@@ -19,3 +19,7 @@ export default function About() {
     </div>
   )
 }
+
+contact.propTypes = {}
+
+export default contact
