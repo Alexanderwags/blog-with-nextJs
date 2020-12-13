@@ -1,6 +1,5 @@
 import Head from "next/head"
-import Header from "@/components/sections/Header"
-import axios from "axios"
+import Post from "components/blog/Post"
 import fetch from "node-fetch"
 export default function Home({ posts }) {
   return (
@@ -11,7 +10,9 @@ export default function Home({ posts }) {
       <main>
         <h1>Blog</h1>
         <div>
-          <p>{JSON.stringify(posts)}</p>
+          {posts.map((p) => (
+            <Post post={p} key={p.id} />
+          ))}
         </div>
       </main>
     </div>
