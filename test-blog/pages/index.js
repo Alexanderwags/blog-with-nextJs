@@ -1,7 +1,8 @@
 import Head from "next/head"
 import Header from "@/components/sections/Header"
-
-export default function Home() {
+import axios from "axios"
+import fetch from "node-fetch"
+export default function Home({ posts }) {
   return (
     <div>
       <Head>
@@ -9,8 +10,19 @@ export default function Home() {
       </Head>
       <main>
         <h1>Blog</h1>
-        <span>{process.env.API_BLOG}</span>
+        <div>
+          <p>{JSON.stringify(posts)}</p>
+        </div>
       </main>
     </div>
   )
+}
+export async function getStaticProps(context) {
+  const response = await fetch(`${process.env.API_BLOG}/posts`)
+  const posts = await response.json()
+  return {
+    props: {
+      posts,
+    }, // will be passed to the page component as props
+  }
 }
