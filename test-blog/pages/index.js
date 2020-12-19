@@ -9,7 +9,7 @@ export default function Home({ posts }) {
       </Head>
       <main>
         <h1>Blog</h1>
-        <div>
+        <div className="ed-grid m-grid-3 row-gab">
           {posts.map((p) => (
             <Post post={p} key={p.id} />
           ))}
