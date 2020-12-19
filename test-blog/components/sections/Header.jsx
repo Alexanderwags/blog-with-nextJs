@@ -8,11 +8,7 @@ function Header(props) {
       <div className="ed-grid s-grid-5 lg-grid-4">
         <div className="s-col">
           <Link href="/">
-            <img
-              src="https://ed.team/static/images/logo/logo-alt.svg"
-              alt="EdLogo"
-              className="main-logo"
-            />
+            <img src="/logo.svg" alt="EdLogo" className="main-logo" />
           </Link>
         </div>
         <MainMenu />
