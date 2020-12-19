@@ -1,6 +1,7 @@
 import React from "react"
 import Head from "next/head"
 import fetch from "node-fetch"
+import Comments from "components/Comments/Comments"
 function PostBlog({ post }) {
   return (
     <div>
@@ -14,6 +15,7 @@ function PostBlog({ post }) {
           <h1>{post.title}</h1>
           <p>{post.body}</p>
         </div>
+        <Comments id={post.id} />
       </main>
     </div>
   )
