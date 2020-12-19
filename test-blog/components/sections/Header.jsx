@@ -1,17 +1,22 @@
 import React from "react"
 import PropTypes from "prop-types"
 import MainMenu from "../navigation/MainMenu"
-
+import Link from "next/link"
 function Header(props) {
   return (
-    <header>
-      <div className="logo">
-        <img
-          src="https://ed.team/static/images/logo/logo-alt.svg"
-          alt="EdLogo"
-        />
+    <header className="main-header">
+      <div className="ed-grid s-grid-5 lg-grid-4">
+        <div className="s-col">
+          <Link href="/">
+            <img
+              src="https://ed.team/static/images/logo/logo-alt.svg"
+              alt="EdLogo"
+              className="main-logo"
+            />
+          </Link>
+        </div>
+        <MainMenu />
       </div>
-      <MainMenu />
     </header>
   )
 }
