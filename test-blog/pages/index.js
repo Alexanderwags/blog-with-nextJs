@@ -1,12 +1,39 @@
 import Head from "next/head"
 import Post from "components/blog/Post"
 import fetch from "node-fetch"
+import { NextSeo } from "next-seo"
 export default function Home({ posts }) {
   return (
     <div>
-      <Head>
-        <title>Home | {process.env.SITE_NAME}</title>
-      </Head>
+      <NextSeo
+        title="Welcome to Blog"
+        description="Blog of test"
+        openGraph={{
+          url: "https://test",
+          title: "Welcome to Blog",
+          description: "Blog of test",
+          images: [
+            {
+              url: "https://www.deepl.com/img/logo/DeepL_Logo_darkBlue_v2.svg",
+              width: 1280,
+              height: 720,
+              alt: "Picture",
+            },
+            {
+              url: "https://www.deepl.com/img/logo/DeepL_Logo_darkBlue_v2.svg",
+              width: 1280,
+              height: 720,
+              alt: "Picture",
+            },
+          ],
+          site_name: "test",
+        }}
+        twitter={{
+          handle: "@william_ws7",
+          site: "@william_ws7",
+          cardType: "summary_large",
+        }}
+      />
       <main>
         <h1>Blog</h1>
         <div className="ed-grid m-grid-3 row-gab">
